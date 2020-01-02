@@ -41,7 +41,7 @@ build-pack:
   dependencies:
     - install
   script:
-    - CI=false yarn build --prod
+    - CI=false yarn build
   artifacts:
     paths:
       - build/
