@@ -16,6 +16,9 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      fadedblue: "#E9F0F8",
+      fadedyellow: "F9F3E9",
+
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -263,6 +266,7 @@ module.exports = {
       xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.875rem',
+      '2rem': '2rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
