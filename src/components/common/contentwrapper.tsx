@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface IContentWrapper {
-  children?: JSX.Element | Array<JSX.Element>,
+  children?: JSX.Element | Array<JSX.Element> | undefined | Array<undefined> | Element | Array<Element> | object,
   className?: string
 }
 
