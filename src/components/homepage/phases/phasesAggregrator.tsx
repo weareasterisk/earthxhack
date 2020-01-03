@@ -10,10 +10,11 @@ export interface IPhases {
 const Phases: React.FC<IPhases> = ({data}) => {
   return (
     <React.Fragment>
-      <Spacer color="transparent" height="2"/>
-      {data.map((phase: IPhase) => {
+      <div className="lg:h-2 h-3"/>
+      {data.map((phase: IPhase, key) => {
         return <Phase
           phase={phase}
+          key={key}
         />
       })}
     </React.Fragment>

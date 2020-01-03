@@ -1,6 +1,7 @@
 export default interface IPhase {
   title?: string,
-  period?: string,
+  startTime?: string | Date,
+  endTime?: string | Date,
   tagline?: string,
   content?: Array<string>,
   image?: string
