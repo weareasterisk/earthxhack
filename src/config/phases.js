@@ -8,7 +8,7 @@ const data = [
       "Learn is a series of workshops and lightning talks about subjects that are relevant to the world and to this event. You can expect a variety of sessions around technical topics, environmental issues, inspiration for your projects, ideation and coming up with cool thoughts, how to build your projects, and more!",
       "Talks and sessions will be delivered in person at Fair Park and will also be live streamed. You are welcome to join us for any portion of the session. Applications are not required for this portion of the event."
     ],
-    image: "//cdn.weareasterisk.com/event-assets/earthxhack/artwork/sprout-min.png"
+    image: "https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/sprout-min.png"
   },
   {
     title: "Part 1: Dream",
@@ -20,7 +20,7 @@ const data = [
       "During Dream, we’ll offer workshops, talks, fun activities, meals and snacks, and that all-night ideation frenzy that hackathons are famous for.",
       "Like your ideas a lot and want to actually make them happen through technology? Carry over your idea into Build, team up with new or the same people, and become eligible for additional prizes in Build."
     ],
-    image: "//cdn.weareasterisk.com/event-assets/earthxhack/artwork/grow-min.png"
+    image: "https//cdn.weareasterisk.com/event-assets/earthxhack/artwork/grow-min.png"
   },
   {
     title: "Part 2: Build",
@@ -32,7 +32,7 @@ const data = [
       "",
       "This year, we’re offering collaboration prizes. Team up with a booth from the festival to work on your project and you can both win prizes. In addition, you can use ideas from our Dream phase to build your own projects. Work with collaborators from Dream and become eligible for additional prizes."
     ],
-    image: "//cdn.weareasterisk.com/event-assets/earthxhack/artwork/build-min.png"
+    image: "https//cdn.weareasterisk.com/event-assets/earthxhack/artwork/build-min.png"
   }
 ]
 
