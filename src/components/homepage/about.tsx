@@ -1,5 +1,6 @@
 import React from "react";
 import ContentWrapper from "../common/contentwrapper"
+import InlineImage from "../common/inlineImage"
 
 const About: React.FC = () => {
   return (
@@ -22,9 +23,7 @@ const About: React.FC = () => {
               difference for the future.
             </p>
           </div>
-          <div className="relative w-full items-center lg:justify-end flex py-1.8125 justify-around">
-            <img className="inline-block h-auto max-w-10 lg:max-w-18.75" src="//cdn.weareasterisk.com/event-assets/earthxhack/artwork/poly-earth.png" alt="poly earth"/>
-          </div>
+          <InlineImage className="lg:pb-1 lg:pt-0 pt-1.8125 pb-3" imageClassName="" maxWidth="18.75" maxMobileWidth="10" src="//cdn.weareasterisk.com/event-assets/earthxhack/artwork/poly-earth.svg" alt="poly earth"/>
         </div>
       </div>
     </ContentWrapper>
