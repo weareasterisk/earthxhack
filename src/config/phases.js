@@ -20,7 +20,7 @@ const data = [
       "During Dream, we’ll offer workshops, talks, fun activities, meals and snacks, and that all-night ideation frenzy that hackathons are famous for.",
       "Like your ideas a lot and want to actually make them happen through technology? Carry over your idea into Build, team up with new or the same people, and become eligible for additional prizes in Build."
     ],
-    image: "https//cdn.weareasterisk.com/event-assets/earthxhack/artwork/grow-min.png"
+    image: "https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/grow-min.png"
   },
   {
     title: "Part 2: Build",
@@ -32,7 +32,7 @@ const data = [
       "",
       "This year, we’re offering collaboration prizes. Team up with a booth from the festival to work on your project and you can both win prizes. In addition, you can use ideas from our Dream phase to build your own projects. Work with collaborators from Dream and become eligible for additional prizes."
     ],
-    image: "https//cdn.weareasterisk.com/event-assets/earthxhack/artwork/build-min.png"
+    image: "https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/build-min.png"
   }
 ]
 
