@@ -1,6 +1,6 @@
 import React from "react";
 import Media from "react-media";
-import moment, {Moment} from "moment";
+import {Moment} from "moment";
 
 const mediaQueries = {
   lg: {minWidth: "1024px"},
@@ -22,17 +22,6 @@ interface IPeriodDate {
 }
 
 const PhasePeriod: React.FC<IPhasePeriod> = ({ startTime, endTime }) => {
-  const start: IPeriodDate = {
-    month: startTime.month().toLocaleString(),
-    day: startTime.day().toString(),
-    time: startTime.toLocaleString()
-  }
-  const end: IPeriodDate = {
-    month: startTime.month().toLocaleString(),
-    day: startTime.day().toString(),
-    time: startTime.toLocaleString()
-  }
-
   const mobileComponent = startTime.isSame(endTime, 'day')
     ? <React.Fragment>
       {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("h:mma") : ""}`}

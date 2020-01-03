@@ -1,7 +1,6 @@
 import React from "react";
 import IPhase from "../../../types/phase"
 import Phase from "./phase"
-import Spacer from "../../common/spacer"
 
 export interface IPhases {
   data: Array<IPhase>
