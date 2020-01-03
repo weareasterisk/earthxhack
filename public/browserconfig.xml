@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="https://cdn.weareasterisk.com/event-assets/earthxhack/favicons/mstile-150x150.png?v=A0mMjO03Nx"/>
+            <square310x310logo src="https://cdn.weareasterisk.com/event-assets/earthxhack/favicons/mstile-310x310.png?v=A0mMjO03Nx"/>
+            <TileColor>#2b5797</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
