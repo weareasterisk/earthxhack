@@ -7,8 +7,10 @@ export interface IContentWrapper {
 
 const ContentWrapper: React.FC<IContentWrapper> = ({children, className}) => {
   return (
-    <div className={`px-2.5 md:px-12 ${className}`}>
-      {children}
+    <div className={`${className}`}>
+      <div className="container">
+        {children}
+      </div>
     </div>
   )
 }

@@ -4,11 +4,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
-      xs: '480px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      ...require("./src/config/screens")
     },
     colors: {
       transparent: 'transparent',
@@ -149,9 +145,12 @@ module.exports = {
       '6': '6rem',
       '8': '8rem',
       '10': '10rem',
+      '11': '11rem',
       '12': '12rem',
       '14': '14rem',
       '16': '16rem',
+      '18.75': '18.75rem',
+      '25': '25rem'
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -198,7 +197,10 @@ module.exports = {
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
     },
-    container: {},
+    container: {
+      center: true,
+      padding: "2.5rem"
+    },
     cursor: {
       auto: 'auto',
       default: 'default',
@@ -324,9 +326,11 @@ module.exports = {
     },
     maxWidth: {
       '10': '10rem',
+      '11': '11rem',
       '18.75': '18.75rem',
       xs: '20rem',
       sm: '24rem',
+      '25': '25rem',
       md: '28rem',
       lg: '32rem',
       xl: '36rem',
