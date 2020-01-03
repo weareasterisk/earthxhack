@@ -6,7 +6,7 @@ interface ImageSpacerProps {
 }
 
 interface ImageSpacerState {
-  image: HTMLImageElement,
+  image: HTMLImageElement | string,
   height: number,
   width: number,
   src: string
@@ -15,15 +15,26 @@ interface ImageSpacerState {
 export default class ImageSpacer extends React.Component<ImageSpacerProps, ImageSpacerState> {
   constructor(props: ImageSpacerProps) {
     super(props)
-    const image = new Image()
-    image.src = props.image
-    const { height, width, src } = image
-
     this.state = {
-      image,
-      height,
-      width,
-      src
+      image: "",
+      height: 0,
+      width: 0,
+      src: ""
+    }
+  }
+
+  componentDidMount() {
+    const { image } = this.props
+
+    const imageLoader = new Image()
+    imageLoader.src = image
+    imageLoader.onload = () => {
+      this.setState({
+        image: imageLoader,
+        height: imageLoader.height,
+        width: imageLoader.width,
+        src: imageLoader.src
+      })
     }
   }
 
@@ -34,8 +45,8 @@ export default class ImageSpacer extends React.Component<ImageSpacerProps, Image
         <div
         className="background bg-contain bg-no-repeat w-full h-0"
         style={{
-          backgroundImage: ImageUtilities.standardizeUrl(src),
-          paddingTop: `${((height/width)*100)}%`
+          backgroundImage: !!src ? ImageUtilities.standardizeUrl(src) : "",
+          paddingTop: (width && height) ? `${((height/width)*100)}%` : ""
         }}
       />
       </React.Fragment>
