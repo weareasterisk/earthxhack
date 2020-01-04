@@ -40,7 +40,7 @@ export default class LazyImage extends React.Component<ILazyImageProps, ILazyIma
 
   render() {
     const { src, placeholder } = this.state
-    const { className, style, alt, children } = this.props;
+    const { className, style, alt } = this.props;
     return (
       <React.Fragment>
         <img className={`${className}`}

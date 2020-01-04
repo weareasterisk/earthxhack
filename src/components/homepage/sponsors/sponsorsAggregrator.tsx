@@ -1,7 +1,6 @@
 import React from "react"
 import ContentWrapper from "../../common/contentwrapper";
 import SectionTitle from "../../common/sectionTitle"
-import COLORS from "../../../config/style/colors"
 
 export interface ISponsorsAggregrator {
   data: any
