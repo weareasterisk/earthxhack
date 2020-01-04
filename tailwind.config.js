@@ -12,8 +12,7 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
-      fadedblue: "#E9F0F8",
-      fadedyellow: "F9F3E9",
+      ...require('./src/config/style/colors'),
 
       gray: {
         100: '#f7fafc',
