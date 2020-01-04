@@ -27,8 +27,8 @@ const UnderlinedTitle: React.FC<IUnderlinedTitle> = ({color, className, style, c
         <div className={`relative`} style={{ zIndex: -500}}>
           <div style={{
             // marginTop: `calc(-1 * (${height} / 1.3))`,
-            transform: "translate(0, -80%)",
-            width: width,
+            transform: "translate(0, -60%)",
+            width: grow ? width : `calc(${width} + 10%)`,
             ...commonStyles
           }}
           className={lineClasses}>
