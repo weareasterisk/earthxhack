@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IInlineImage {
+interface IDecoratorImage {
   src: string,
   alt?: string,
   className?: string,
@@ -9,7 +9,7 @@ interface IInlineImage {
   maxMobileWidth?: string
 }
 
-const InlineImage: React.FC<IInlineImage> = ({src, alt, className, imageClassName, maxWidth, maxMobileWidth}) => {
+const DecoratorImage: React.FC<IDecoratorImage> = ({src, alt, className, imageClassName, maxWidth, maxMobileWidth}) => {
   return (
     <React.Fragment>
       <div className={`relative w-full items-center lg:justify-end flex justify-around ${className}`}>
@@ -19,4 +19,4 @@ const InlineImage: React.FC<IInlineImage> = ({src, alt, className, imageClassNam
   )
 }
 
-export default InlineImage;
+export default DecoratorImage;
