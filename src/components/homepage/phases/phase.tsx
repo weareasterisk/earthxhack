@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import IPhaseType from "../../../types/phase";
 import ContentWrapper from "../../common/contentwrapper";
-import InlineImage from "../../common/inlineImage";
+import DecoratorImage from "../../common/decoratorImage";
 import UnderlinedTitle from "../../common/underlinedTitle";
 import PhasePeriod from "./phasePeriod";
 import COLORS from "../../../config/style/colors";
@@ -32,7 +32,7 @@ const Phase: React.FC<IPhase> = ({phase}) => {
             })}
           </div>
           {phase.image &&
-            <InlineImage className="lg:pb-1 lg:pt-0 lg:pt-1.8125 lg:pl-3 pb-3" src={phase.image} maxMobileWidth="11" maxWidth="25"/>
+            <DecoratorImage className="lg:pb-1 lg:pt-0 lg:pt-1.8125 lg:pl-3 pb-3" src={phase.image} maxMobileWidth="11" maxWidth="25"/>
           }
         </div>
       </ContentWrapper>
