@@ -3,7 +3,9 @@ import moment from "moment";
 import IPhaseType from "../../../types/phase";
 import ContentWrapper from "../../common/contentwrapper";
 import InlineImage from "../../common/inlineImage";
+import UnderlinedTitle from "../../common/underlinedTitle";
 import PhasePeriod from "./phasePeriod";
+import COLORS from "../../../config/style/colors";
 
 interface IPhase {
   phase: IPhaseType
@@ -19,8 +21,7 @@ const Phase: React.FC<IPhase> = ({phase}) => {
       <ContentWrapper className="lg:pt-8 w-full">
         <div className="flex w-full flex-wrap-reverse md:flex-no-wrap">
           <div className="max-w-lg w-full">
-            <h1 className="font-thin lg:text-6xl text-3xl pb-1">{phase.title}</h1>
-            {/* <p className="font-semibold lg:text-2xl text-lg pb-1">{phase.period}</p> */}
+            <UnderlinedTitle className="font-thin lg:text-6xl text-3xl pb-1" lineClasses="h-1 lg:h-2" grow="left" color={COLORS.fadedblue} width="8rem">{phase.title}</UnderlinedTitle>
             <PhasePeriod startTime={start} endTime={end}/>
             <p className="font-normal lg:text-base text-sm">{phase.tagline}</p>
             <div className="lg:h-4 h-2.5"/>
