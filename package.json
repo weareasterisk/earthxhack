@@ -4,7 +4,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@craco/craco": "^5.6.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -29,12 +28,12 @@
   "scripts": {
     "start": "run-s build:css start:code",
     "build": "run-s build:css build:code",
-    "start:code": "craco start",
-    "build:code": "craco build",
+    "start:code": "react-scripts start",
+    "build:code": "react-scripts build",
     "build:css": "tailwind build src/tailwind.scss -c tailwind.config.js -o src/generated.scss",
     "clean": "rimraf build node_modules",
-    "test": "craco test",
-    "eject": "craco eject",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "disabled:postbuild": "react-snap --no-sandbox"
   },
   "eslintConfig": {
@@ -59,10 +58,7 @@
     ]
   },
   "devDependencies": {
-    "glob-all": "^3.1.0",
     "npm-run-all": "^4.1.5",
-    "path": "^0.12.7",
-    "purgecss-webpack-plugin": "^1.6.0",
     "rimraf": "^3.0.0",
     "tailwindcss": "^1.1.4"
   }
