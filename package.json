@@ -26,11 +26,12 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "run-s build:css start:code",
-    "build": "run-s build:css build:code",
+    "start": "cross-env NODE_ENV=development run-p build:css:watch start:code",
+    "build": "cross-env NODE_ENV=production run-s build:css build:code",
     "start:code": "react-scripts start",
     "build:code": "react-scripts build",
-    "build:css": "tailwind build src/tailwind.scss -c tailwind.config.js -o src/generated.scss",
+    "build:css": "postcss src/tailwind.scss -o src/generated.scss",
+    "build:css:watch": "postcss src/tailwind.scss -o src/generated.scss -w",
     "clean": "rimraf build node_modules",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -58,7 +59,22 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "autoprefixer": "^9.7.3",
+    "cross-env": "^6.0.3",
+    "cssnano": "^4.1.10",
+    "glob-all": "^3.1.0",
     "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^6.1.3",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^8.0.0",
+    "purgecss-webpack-plugin": "^1.6.0",
     "rimraf": "^3.0.0",
     "tailwindcss": "^1.1.4"
   }
