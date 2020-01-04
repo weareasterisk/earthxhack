@@ -134,6 +134,7 @@ module.exports = {
       '1': '1rem',
       '1.25': '1.25rem',
       '1.5': '1.5rem',
+      '1.75': '1.75rem',
       '1.8125': "1.8125rem",
       '2': '2rem',
       '2.5': '2.5rem',
@@ -149,7 +150,8 @@ module.exports = {
       '14': '14rem',
       '16': '16rem',
       '18.75': '18.75rem',
-      '25': '25rem'
+      '25': '25rem',
+      'full': '100%'
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -289,10 +291,11 @@ module.exports = {
       full: '100%',
       screen: '100vh',
     }),
-    inset: {
+    inset: theme => ({
       '0': '0',
+      ...theme('spacing'),
       auto: 'auto',
-    },
+    }),
     letterSpacing: {
       tighter: '-0.05em',
       tight: '-0.025em',
@@ -324,6 +327,7 @@ module.exports = {
       screen: '100vh',
     },
     maxWidth: {
+      '8': '8rem',
       '10': '10rem',
       '11': '11rem',
       '18.75': '18.75rem',
