@@ -1,4 +1,6 @@
-const data = [
+import IPhase from "../types/phase";
+
+const data: Array<IPhase> = [
   {
     title: "Part 0: Learn",
     startTime: "2020-04-24T12:00:00",
