@@ -216,6 +216,7 @@ module.exports = {
     },
     flex: {
       '1': '1 1 0%',
+      '1/2': "1 1 50%",
       auto: '1 1 auto',
       initial: '0 1 auto',
       none: 'none',
