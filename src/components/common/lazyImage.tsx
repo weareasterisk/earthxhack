@@ -22,32 +22,29 @@ export default class LazyImage extends React.Component<ILazyImageProps, ILazyIma
     }
   }
 
-  async componentDidMount() {
-    const { src, placeholder } = this.props
+  async loadImage(src: string) {
     const imageLoader = new Image();
     imageLoader.src = src;
     imageLoader.onload = () => {
       this.setState({ src })
     }
-    if (!!placeholder) {
-      const placeholderLoader = new Image();
-      placeholderLoader.src = placeholder
-      placeholderLoader.onload = () => {
-        this.setState({ placeholder })
-      }
-    }
+  }
+
+  async componentDidMount() {
+    const { src } = this.props
+    Promise.resolve(this.loadImage(src))
   }
 
   render() {
-    const { src, placeholder } = this.state
-    const { className, style, alt } = this.props;
+    const { src } = this.state
+    const { placeholder, className, style, alt } = this.props;
     return (
       <React.Fragment>
         <img className={`${className}`}
           style={{
             ...style
           }}
-          src={!!src ? src : (!!placeholder ? placeholder : "")}
+          src={src || placeholder}
           alt={alt}
         />
       </React.Fragment>
