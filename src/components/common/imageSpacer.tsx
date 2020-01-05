@@ -12,13 +12,15 @@ interface IImageSpacer {
 const ImageSpacer: React.FC<IImageSpacer> = ({image, placeholder, className, background, style}) => {
   return (
     <React.Fragment>
-      <div className={`${className}`} style={{background: background}}>
-        <LazyImage
-          src={image}
-          placeholder={placeholder}
-          className="w-full h-auto"
-        />
-      </div>
+      <LazyImage
+        src={image}
+        placeholder={placeholder}
+        className={`w-full h-auto ${className}`}
+        style={{
+          background: background,
+          ...style
+        }}
+      />
     </React.Fragment>
   )
 }
