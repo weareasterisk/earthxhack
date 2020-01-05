@@ -4,6 +4,8 @@ import Phases from "../homepage/phases/phasesAggregrator"
 import PhaseData from "../../config/phases"
 import ImageSpacer from "../common/imageSpacer"
 import Sponsors from "../homepage/sponsors/sponsorsAggregrator"
+import FAQs from "../homepage/faq/faqAggregrator";
+import FAQData from "../../config/faq";
 
 export default class HomePage extends Component {
   render() {
@@ -21,6 +23,9 @@ export default class HomePage extends Component {
         <ImageSpacer 
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood.webp" 
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood-ld.webp"
+        />
+        <FAQs
+          data={FAQData}
         />
       </React.Fragment>
 
