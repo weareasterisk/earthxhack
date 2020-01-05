@@ -1,15 +1,19 @@
 import React from "react";
 import * as ImageUtilities from "../../utilities/imageUtilities"
+import LazyBackground from "./lazyBackground"
 
 interface ImageSpacerProps {
-  image: string
+  image: string,
+  placeholder?: string,
+  className?: string
 }
 
 interface ImageSpacerState {
   image: HTMLImageElement | string,
   height: number,
   width: number,
-  src: string
+  src: string,
+  placeholder: string
 }
 
 export default class ImageSpacer extends React.Component<ImageSpacerProps, ImageSpacerState> {
@@ -19,7 +23,8 @@ export default class ImageSpacer extends React.Component<ImageSpacerProps, Image
       image: "",
       height: 0,
       width: 0,
-      src: ""
+      src: "",
+      placeholder: ""
     }
   }
 
@@ -40,15 +45,16 @@ export default class ImageSpacer extends React.Component<ImageSpacerProps, Image
 
   render() {
     const { height, width, src } = this.state
+    const { placeholder, className } = this.props
     return (
       <React.Fragment>
         <div
-        className="background bg-contain bg-no-repeat w-full h-0"
-        style={{
-          backgroundImage: !!src ? ImageUtilities.standardizeUrl(src) : "",
-          paddingTop: (width && height) ? `${((height/width)*100)}%` : ""
-        }}
-      />
+          className={`background bg-contain bg-no-repeat w-full h-0 ${className}`}
+          style={{
+            backgroundImage: ImageUtilities.standardizeUrl(src),
+            paddingTop: (width && height) ? `${((height/width)*100)}%` : ""
+          }}
+        />
       </React.Fragment>
     )
   }
