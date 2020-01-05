@@ -11,8 +11,12 @@ export default class HomePage extends Component {
       <React.Fragment>
         <About/>
         <Phases data={PhaseData}/>
-        <ImageSpacer image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/mountains-min.png"/>
+        <ImageSpacer 
+          image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/mountains.webp"
+          className="mt-4 lg:mt-14"
+        />
         <Sponsors data="asd"/>
+        <ImageSpacer image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood.webp" />
       </React.Fragment>
 
     )
