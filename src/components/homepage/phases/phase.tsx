@@ -32,7 +32,7 @@ const Phase: React.FC<IPhase> = ({phase}) => {
             })}
           </div>
           {phase.image &&
-            <DecoratorImage className="lg:pb-1 lg:pt-0 lg:pt-1.8125 lg:pl-3 pb-3" imageClassName="w-11 lg:w-25" src={phase.image}/>
+            <DecoratorImage className="lg:pb-1 lg:pt-0 lg:pt-1.8125 lg:pl-3 pb-3" imageClassName="w-11 lg:w-25" src={phase.image} placeholder={phase.placeholder} alt={phase.alt}/>
           }
         </div>
       </ContentWrapper>
