@@ -10,7 +10,7 @@ const Sponsors: React.FC<ISponsorsAggregrator> = ({data}) => {
   return (
     <React.Fragment>
       <ContentWrapper>
-        <SectionTitle name="Sponsors" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/flower1-min.png"/>
+        <SectionTitle name="Sponsors" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/flower1.webp"/>
       </ContentWrapper>
     </React.Fragment>
   )
