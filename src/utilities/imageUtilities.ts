@@ -1,3 +1,3 @@
-export const standardizeUrl = (url: string) => {
+export const standardizeUrl = (url: string | undefined) => {
   return `url(${url})`
 }
