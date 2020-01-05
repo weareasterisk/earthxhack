@@ -4,5 +4,7 @@ export default interface IPhase {
   endTime?: string | Date,
   tagline?: string,
   content?: Array<string>,
-  image?: string
+  image?: string,
+  placeholder?: string,
+  alt?: string
 }
