@@ -143,6 +143,7 @@ module.exports = {
       '4': '4rem',
       '5': '5rem',
       '6': '6rem',
+      '7': '7rem',
       '8': '8rem',
       '8.5': '8.5rem',
       '10': '10rem',
@@ -152,6 +153,7 @@ module.exports = {
       '16': '16rem',
       '18.75': '18.75rem',
       '25': '25rem',
+      '35': '35rem',
       '40': '40rem',
       '42': '42rem',
       'full': '100%'
@@ -172,6 +174,7 @@ module.exports = {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
+      'h-1/2': '100% 50%',
     },
     borderColor: theme => ({
       ...theme('colors'),
@@ -294,10 +297,12 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      '1/2-screen': '50vh',
     }),
-    inset: theme => ({
+    inset: (theme, {negative}) => ({
       '0': '0',
       ...theme('spacing'),
+      ...negative(theme('spacing')),
       auto: 'auto',
     }),
     letterSpacing: {
@@ -329,6 +334,8 @@ module.exports = {
     }),
     maxHeight: {
       full: '100%',
+      '1/2': '50%',
+      '1/2-screen': '50vh',
       screen: '100vh',
     },
     maxWidth: theme => ({
@@ -353,6 +360,7 @@ module.exports = {
     minHeight: {
       '0': '0',
       full: '100%',
+      '1/2-screen': '50vh',
       screen: '100vh',
     },
     minWidth: {
@@ -440,6 +448,7 @@ module.exports = {
       '30': '30',
       '40': '40',
       '50': '50',
+      '-50': '-50',
     },
   },
   variants: {

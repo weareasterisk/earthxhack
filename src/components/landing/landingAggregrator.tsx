@@ -2,6 +2,7 @@ import React from "react";
 import Media from "react-media"
 import ImageSpacer from "../common/imageSpacer"
 import LazyBackground from "../common/lazyBackground"
+import LazyImage from "../common/lazyImage";
 
 const mediaQueries = {
   lg: {minWidth: "1024px"},
@@ -13,6 +14,10 @@ const mediaQueries = {
 
 const sunflowerFieldUrl = "https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/sunflower-field.png"
 const sunflowerFieldPlaceholder = "https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/sunflower-field-ld.png"
+
+const registrationUrl = "https://astr.sk/earthxhack-register"
+const volunteerUrl = "https://astr.sk/earthxhack-volunteer"
+const sponsorUrl = "https://astr.sk/earthxhack-sponsor"
 
 const ExhLogo: React.FC = () => {
   return (
@@ -49,7 +54,7 @@ const Location: React.FC = () => {
 const TagLine: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="lg:text-right text-left font-thin">
+      <div className="xl:text-right text-left font-thin">
         <p>Make something</p>
         <p>your mom would</p>
         <p>be proud of.</p>
@@ -58,18 +63,85 @@ const TagLine: React.FC = () => {
   )
 }
 
+const AttendButton: React.FC = () => {
+  return (
+    <div className="relative xl:w-11 xl:ml-5 xl:-mt-2 attend-baloon">
+      <a href={registrationUrl}>
+        <LazyImage src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/attend.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/attend-ld.png"/>
+        <div className="absolute top-3 text-center left-2">
+          <p>Apply to</p>
+          <p className="font-bold text-3xl">Attend</p>
+        </div>
+      </a>
+    </div>
+  )
+}
+
+const VolunteerButton: React.FC = () => {
+  return (
+    <React.Fragment>
+      <div className="relative xl:w-10 xl:ml-16 xl:-mt-2 volunteer-baloon">
+        <a href={volunteerUrl}>
+          <LazyImage src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/volunteer.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/volunteer-ld.png"/>
+          <div className="absolute top-3 text-center left-1.25">
+            <p>Apply to</p>
+            <p className="font-bold text-2xl">Volunteer</p>
+          </div>
+        </a>
+      </div>
+    </React.Fragment>
+  )
+}
+
+const SponsorButton: React.FC = () => {
+  return (
+    <React.Fragment>
+      <div className="overflow-hidden">
+        <div className="overflow-hidden">
+          <div className="absolute xl:top-0 xl:right-0 xl:w-25 xl:-top-6 xl:-right-6">
+            <a href={sponsorUrl}>
+              <LazyImage className="w-full h-full sponsor-sun" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/sponsor.svg"/>
+              <div className="absolute w-full h-auto top-10 flex justify-around text-center">
+                <div>
+                  <p className="font-bold text-2xl">Interested in <br/> Sponsoring?</p>
+                  <p className="pt-.25">Find out more</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  )
+}
+
+const Buttons: React.FC = () => {
+  return (
+    <React.Fragment>
+      <div className="push-1/2 w-1/2 mt-5">
+        <AttendButton/>
+        <VolunteerButton/>
+        <SponsorButton/>
+      </div>
+    </React.Fragment>
+  )
+}
+
 const Landing: React.FC = () => {
   return (
     <React.Fragment>
-      <LazyBackground className="bg-contain min-h-screen bg-bottom bg-no-repeat bg-fadedblue" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}>
+      <div className="h-screen bg-fadedblue relative z-10 overflow-x-hidden">
         <Media queries={mediaQueries}>
           { matches =>
-              matches.lg
+              matches.xl
               ? ( 
                 <React.Fragment>
                   {/* Desktop */}
-                  <div className="pt-8.5 pl-8.5">
-                    <div className="w-40">
+                  <div className="absolute w-full">
+                    <Buttons/>
+                  </div>
+                  <div className="pt-8.5 pl-8.5 margin-auto">
+                    <div className="w-40 float-left">
                       <ExhLogo/>
                       <div className="flex justify-between pt-3 text-2xl">
                         <Location/>
@@ -83,7 +155,7 @@ const Landing: React.FC = () => {
                   {/* Mobile */}
                   <div className="pt-3 px-2.5">
                     <div className="flex justify-around">
-                      <div className="block">
+                      <div className="block lg:text-2xl text-xl">
                         <ExhLogo/>
                         <div className="pt-2 pl-3">
                           <Location/>
@@ -96,7 +168,8 @@ const Landing: React.FC = () => {
               )
           }
         </Media>
-      </LazyBackground>
+        <LazyBackground className="bg-cover bottom-0 absolute w-full min-h-1/2-screen bg-top bg-center bg-no-repeat bg-fadedblue -z-50" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}/>
+      </div>
     </React.Fragment>
   )
 }

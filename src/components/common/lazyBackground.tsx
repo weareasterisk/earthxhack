@@ -5,7 +5,7 @@ interface LazyBackgroundProps {
   placeholder?: string,
   className?: string,
   style?: React.CSSProperties,
-  children: JSX.Element | Array<JSX.Element> | undefined | Array<undefined> | Element | Array<Element> | object,
+  children?: JSX.Element | Array<JSX.Element> | undefined | Array<undefined> | Element | Array<Element> | object,
 }
 
 interface LazyBackgroundState {
