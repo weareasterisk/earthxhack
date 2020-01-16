@@ -6,11 +6,13 @@ import ImageSpacer from "../common/imageSpacer"
 import Sponsors from "../homepage/sponsors/sponsorsAggregrator"
 import FAQs from "../homepage/faq/faqAggregrator";
 import FAQData from "../../config/faq";
+import Landing from "../landing/landingAggregrator"
 
 export default class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
+        <Landing/>
         <About/>
         <Phases data={PhaseData}/>
         <ImageSpacer 

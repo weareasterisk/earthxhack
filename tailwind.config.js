@@ -144,6 +144,7 @@ module.exports = {
       '5': '5rem',
       '6': '6rem',
       '8': '8rem',
+      '8.5': '8.5rem',
       '10': '10rem',
       '11': '11rem',
       '12': '12rem',
@@ -151,6 +152,8 @@ module.exports = {
       '16': '16rem',
       '18.75': '18.75rem',
       '25': '25rem',
+      '40': '40rem',
+      '42': '42rem',
       'full': '100%'
     },
     backgroundColor: theme => theme('colors'),
@@ -312,6 +315,7 @@ module.exports = {
       normal: '1.5',
       relaxed: '1.625',
       loose: '2',
+      veryloose: '2.25',
     },
     listStyleType: {
       none: 'none',
@@ -327,7 +331,8 @@ module.exports = {
       full: '100%',
       screen: '100vh',
     },
-    maxWidth: {
+    maxWidth: theme => ({
+      ...theme('spacing'),
       '8': '8rem',
       '10': '10rem',
       '11': '11rem',
@@ -344,7 +349,7 @@ module.exports = {
       '5xl': '64rem',
       '6xl': '72rem',
       full: '100%',
-    },
+    }),
     minHeight: {
       '0': '0',
       full: '100%',
