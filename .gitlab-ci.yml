@@ -30,12 +30,6 @@ install:
     - node_modules
     expire_in: 30 minutes
 
-#lint-and-test:
-#  stage: quality
-#  script:
-#    - ls
-#     - yarn ci
-
 build-pack:
   stage: build
   dependencies:
