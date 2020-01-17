@@ -26,9 +26,9 @@ export default class HomePage extends Component {
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood.webp" 
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood-ld.webp"
         />
-        <FAQs
+        {/* <FAQs
           data={FAQData}
-        />
+        /> */}
       </React.Fragment>
 
     )
