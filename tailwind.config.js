@@ -141,6 +141,7 @@ module.exports = {
       '3': '3rem',
       '3.5': '3.5rem',
       '4': '4rem',
+      '4.5': '4.5rem',
       '5': '5rem',
       '6': '6rem',
       '7': '7rem',
@@ -363,6 +364,7 @@ module.exports = {
       full: '100%',
       '1/2-screen': '50vh',
       '1/3-screen': '33vh',
+      '1/4-screen': '25vh',
       screen: '100vh',
     },
     minWidth: {

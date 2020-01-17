@@ -39,3 +39,27 @@ html {
 .sponsor-sun {
   animation: spin 12s infinite linear;
 }
+
+.faq-masonry-grid {
+  display: flex;
+	width: auto;
+}
+@media (min-width: 1024px){
+	.remove-margin:first-child {
+		margin-top: -4rem;
+	}
+}
+.faq-masonry-column {
+	padding-left: 12rem;
+  background-clip: padding-box;
+}
+ 
+/* Style your items */
+.faq-masonry-column > div {
+}
+
+p > a {
+	&:hover {
+		text-decoration: underline;
+	}
+}
