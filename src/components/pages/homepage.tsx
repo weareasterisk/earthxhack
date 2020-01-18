@@ -9,6 +9,8 @@ import FAQData from "../../config/faq";
 import Landing from "../landing/landingAggregrator"
 import Schedule from "../homepage/schedule/scheduleAggregrator"
 import ScheduleData from "../../config/schedule"
+import Contact from "../homepage/contact/contactAggregrator";
+import Footer from "../homepage/footer"
 
 export default class HomePage extends Component {
   render() {
@@ -50,6 +52,8 @@ export default class HomePage extends Component {
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass.png"
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass-ld.png"
         />
+        <Contact/>
+        <Footer/>
       </React.Fragment>
 
     )
