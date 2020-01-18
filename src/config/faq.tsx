@@ -83,7 +83,7 @@ const data: Array<IFAQ> = [
   {
     question: "",
     answer: e(
-      <p></p>
+      <p className="-mt-2"></p>
     )
   },
   {

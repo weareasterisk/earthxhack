@@ -19,7 +19,7 @@ const FAQs: React.FC<IFAQs> = ({data}) => {
     <React.Fragment>
       <ContentWrapper>
         <SectionTitle name="FAQ" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/sunflower.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/sunflower-ld.png"/>
-        <Masonry breakpointCols={breakpointColumns} columnClassName="faq-masonry-column remove-margin" className="faq-masonry-grid flex flex-wrap flex-column overflow-auto -ml-12">
+        <Masonry breakpointCols={breakpointColumns} columnClassName="faq-masonry-column remove-margin" className="faq-masonry-grid flex flex-wrap flex-column overflow-hidden -ml-12">
           {data.map((content: IFAQ, key) => {
             return <FAQ
               faq={content}
