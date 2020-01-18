@@ -40,7 +40,7 @@
     "clean": "rimraf build node_modules",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "disabled:postbuild": "react-snap --no-sandbox"
+    "postbuild": "react-snap --no-sandbox"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -3,11 +3,9 @@
 # Assumes `npm run build` will build application into build/
 # VARIABLES MUST BE FILLED OUT FOR THIS TO FUNCTION PROPERLY
 ################################################################
-image: rastasheep/alpine-node-chromium:12-alpine
+image: registry.gitlab.com/weareasterisk/registry/node-chrome:12
 
 stages:
-  - install
-  #- quality
   - build
   - deploy
 
@@ -16,24 +14,10 @@ variables:
   DOCKER_DRIVER: overlay2             #
 #######################################
 
-install:
-  stage: install
-  script:
-    - npm install -g yarn
-    - yarn
-  cache:
-    key: $CI_JOB_NAME-$CI_COMMIT_REF_SLUG_reg
-    paths:
-      - node_modules/
-  artifacts:
-    paths:
-    - node_modules
-    expire_in: 30 minutes
-
 build-pack:
   stage: build
-  dependencies:
-    - install
+  before_script:
+    - yarn install
   script:
     - CI=false yarn build
   artifacts:
