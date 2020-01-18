@@ -8,8 +8,14 @@ const AboutDecorators: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex w-full justify-right">
-        <DecoratorImage className="lg:pb-1 lg:pt-0 pt-1.8125 pb-3" imageClassName="lg:w-18.75 w-10" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/poly-earth.svg" alt="poly earth"/>
-        <img className="lg:w-14 lg:pt-14 lg:-pr-12" alt="red planet" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/planets/red-planet.svg"/>
+        <div className="relative w-full h-auto">
+          <div className="z-0">
+            <DecoratorImage className="lg:pb-1 lg:mt-3 pt-1.8125 pb-3" imageClassName="lg:w-18.75 w-10" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/poly-earth.svg" alt="poly earth"/>
+            <img className="absolute lg:h-14 md:h-8 h-6 lg:-right-14 -right-6 lg:top-18 top-8 z-10" alt="red planet" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/planets/red-planet.svg"/>
+            <img className="absolute lg:h-6 md:h-4 h-3 lg:left-20 left-1 lg:top-0 top-0" alt="yellow planet" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/planets/yellow-planet.svg"/>
+            <img className="absolute lg:h-4 md:h-3 h-2 lg:left-12 md:left-6 left-0 lg:top-25 top-12" alt="blue planet" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/planets/blue-planet.svg"/>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   )
@@ -17,7 +23,7 @@ const AboutDecorators: React.FC = () => {
 
 const About: React.FC = () => {
   return (
-    <LazyBackground className="bg-cover min-h-screen" src="https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/patrick-fore-unsplash.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/patrick-fore-unsplash-ld.png">
+    <LazyBackground className="bg-cover min-h-screen overflow-hidden" src="https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/patrick-fore-unsplash.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/patrick-fore-unsplash-ld.png">
       <ContentWrapper className="text-white">
         <div className="flex flex-wrap">
           <h1 className="pt-3.5 lg:pt-10 font-semibold lg:text-5xl md:text-4xl text-2xl min-w-full">What is EarthxHack?</h1>
