@@ -97,21 +97,17 @@ const VolunteerButton: React.FC = () => {
 const SponsorButton: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="overflow-hidden -z-50">
-        <div className="overflow-hidden">
-          <div className="absolute xl:top-0 xl:right-0 xl:w-25 lg:w-18 w-12 xl:-top-6 -top-1 xl:-right-6 -right-6 -z-40">
-            <a href={sponsorUrl}>
-              <LazyImage className="w-full h-full sponsor-sun" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/sponsor.svg"/>
-              <div className="absolute w-full h-auto xl:top-10 lg:top-7 top-4.5 flex justify-around text-center">
-                <div>
-                  <p className="font-bold xl:text-2xl lg:text-base text-xs">Interested in <br/> Sponsoring?</p>
-                  <p className="pt-.25 xl:text-base lg:text-xs text-xxs">Find out more</p>
-                </div>
+        <div className="absolute xl:w-25 lg:w-18 w-12 xl:-top-6 -top-1 xl:-right-6 -right-6 z-1">
+          <a href={sponsorUrl}>
+            <LazyImage className="w-full h-full sponsor-sun" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/sponsor.svg"/>
+            <div className="absolute w-full h-auto xl:top-10 lg:top-7 top-4.5 flex justify-around text-center">
+              <div>
+                <p className="font-bold xl:text-2xl lg:text-base text-xs">Interested in <br/> Sponsoring?</p>
+                <p className="pt-.25 xl:text-base lg:text-xs text-xxs">Find out more</p>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
-      </div>
     </React.Fragment>
   )
 }
@@ -119,7 +115,19 @@ const SponsorButton: React.FC = () => {
 const DesktopButtons: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="xl:push-1/2 xl:w-1/2 xl:mt-5 w-full z-0">
+      <div className="xl:push-1/2 xl:w-1/2 xl:mt-5 w-full z-5">
+        <AttendButton/>
+        <VolunteerButton/>
+        <SponsorButton/>
+      </div>
+    </React.Fragment>
+  )
+}
+
+const MobileButtons: React.FC = () => {
+  return (
+    <React.Fragment>
+      <div className="xl:push-1/2 xl:w-1/2 xl:mt-5 w-full z-5">
         <AttendButton/>
         <VolunteerButton/>
         <SponsorButton/>
@@ -131,7 +139,7 @@ const DesktopButtons: React.FC = () => {
 const Landing: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="h-screen bg-fadedblue relative z-10 overflow-x-hidden">
+      <div className="min-h-screen bg-fadedblue relative z-10 overflow-x-hidden">
         <Media queries={mediaQueries}>
           { matches =>
               matches.xl
@@ -162,7 +170,7 @@ const Landing: React.FC = () => {
                           <Location/>
                         </div>
                         <div className="relative pt-1">
-                          <DesktopButtons/>
+                          <MobileButtons/>
                         </div>
                         <TagLine/>
                       </div>
