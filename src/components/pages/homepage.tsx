@@ -8,6 +8,7 @@ import FAQs from "../homepage/faq/faqAggregrator";
 import FAQData from "../../config/faq";
 import Landing from "../landing/landingAggregrator"
 import Schedule from "../homepage/schedule/scheduleAggregrator"
+import ScheduleData from "../../config/schedule"
 
 export default class HomePage extends Component {
   render() {
@@ -42,9 +43,9 @@ export default class HomePage extends Component {
         </section>
 
         <section id="schedule">
-          <Schedule/>
+          <Schedule data={ScheduleData}/>
         </section>
-        
+
         <ImageSpacer
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass.png"
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass-ld.png"

@@ -21,7 +21,8 @@ const dayTwo: ScheduleDay = {
   items: [
     {
       period: "10:00 AM",
-      event: "Phase 2: Build"
+      event: "Phase 2: Build",
+      phase: true
     },
     {
       period: "9:30am",
