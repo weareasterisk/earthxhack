@@ -16,6 +16,8 @@ variables:
 
 build-pack:
   stage: build
+  variables:
+    GENERATE_SOURCEMAPS: false
   before_script:
     - yarn install
   script:
