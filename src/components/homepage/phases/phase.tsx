@@ -20,7 +20,7 @@ const Phase: React.FC<IPhase> = ({phase}) => {
     <React.Fragment>
       <ContentWrapper className="lg:pt-8 w-full">
         <div className="flex w-full flex-wrap-reverse md:flex-no-wrap">
-          <div className="max-w-lg w-full">
+          <div className="max-w-lg w-full lg:pb-0 pb-4">
             <UnderlinedTitle className="font-thin lg:text-6xl text-3xl pb-1" lineClasses="h-1 lg:h-2" grow="left" color={COLORS.fadedblue} width="8rem">{phase.title}</UnderlinedTitle>
             <PhasePeriod startTime={start} endTime={end}/>
             <p className="font-normal lg:text-base text-sm">{phase.tagline}</p>

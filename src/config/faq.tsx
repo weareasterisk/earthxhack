@@ -57,7 +57,7 @@ const data: Array<IFAQ> = [
       <br/>,
       <p>Please only apply for travel reimbursement if you cannot attend without it - we want to enable as many people as possible to join us.</p>,
       <br/>,
-      <p>Your reimbursement amount and method will be determined by your distance to the event. In an effort to be environmentally friendly, if selected to receive reimbursement, we will reimburse carpools within 500 miles of driving distance (minimum of 2 participants in the car) and flights for distances over 500 miles. Don’t have a car? The bus is OK too. Somehow found a train in Texas? That’s cool too!</p>,
+      <p>Your reimbursement amount and method will be determined by your distance to the event. In an effort to be environmentally friendly, if selected to receive reimbursement, we will reimburse carpools within 300 miles of driving distance (minimum of 2 participants in the car) and flights for distances over 300 miles. Don’t have a car? The bus is OK too. Somehow found a train in Texas? That’s cool too!</p>,
       <br/>,
       <p>Unfortunately, we cannot reimburse accommodation or meals/other expenses beyond your primary transportation ticket or gas receipts. In addition, the maximum reimbursement amount under any circumstance is $250 (but we will communicate your limit to you individually). International visitors are more than welcome and we can provide letters for visa purposes, but unfortunately we cannot offer you any more than $250 under any circumstances.</p>
     )
@@ -71,7 +71,7 @@ const data: Array<IFAQ> = [
   {
     question: "What kind of hardware will you have?",
     answer: e(
-      <p>What kind of hardware will you have? We will have a variety of hardware available for use. A full hardware list is <a href="https://astr.sk/earthxhack-hardware"><b>Here</b></a>! If you would like to suggest/request hardware you would like to see at the event we encourage you to fill out <a href="https://astr.sk/hardware-suggestions"><b>this form</b></a>. We also encourage you to bring your own hardware to the event. Hardware will be distributed on a first come first serve basis.</p>
+      <p>We will have a variety of hardware available for use. A full hardware list is <a href="https://astr.sk/earthxhack-hardware"><b>Here</b></a>! If you would like to suggest/request hardware you would like to see at the event we encourage you to fill out <a href="https://astr.sk/hardware-suggestions"><b>this form</b></a>. We also encourage you to bring your own hardware to the event. Hardware will be distributed on a first come first serve basis.</p>
     )
   },
   {

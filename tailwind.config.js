@@ -342,6 +342,8 @@ module.exports = {
       full: '100%',
       '1/2': '50%',
       '1/2-screen': '50vh',
+      '1/3-screen': '33vh',
+      '1/4-screen': '25vh',
       screen: '100vh',
     },
     maxWidth: theme => ({
@@ -451,6 +453,9 @@ module.exports = {
     zIndex: {
       auto: 'auto',
       '0': '0',
+      '1': '1',
+      '2': '2',
+      '5': '5',
       '10': '10',
       '20': '20',
       '30': '30',

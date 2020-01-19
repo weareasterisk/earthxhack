@@ -4,6 +4,15 @@ import ContentWrapper from "../../common/contentwrapper";
 import SectionTitle from "../../common/sectionTitle";
 import IScheduleDay from "../../../types/scheduleDay"
 import ScheduleDay from "./scheduleDay"
+import Media from "react-media";
+
+const mediaQueries = {
+  lg: {minWidth: "1024px"},
+  md: {minWidth: "768px"},
+  sm: {minWidth: "640px"},
+  xl: {minWidth: "1280px"},
+  xs: {minWidth: "480px"}
+}
 
 export interface ISchedule {
   data: {
@@ -23,11 +32,25 @@ const Schedule: React.FC<ISchedule> = ({data}) => {
     <React.Fragment>
       <ContentWrapper>
         <SectionTitle name="Schedule" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower.png" />
-        <Masonry breakpointCols={breakpointColumns} columnClassName="schedule-masonry-column pl-12" className="schedule-masonry-grid flex flex-wrap flex-column overflow-hidden -ml-12">
-          <ScheduleDay {...data.dayOne}/>
-          <ScheduleDay className="pt-1.5" {...data.dayTwo}/>
-          <ScheduleDay className="pt-1.5" {...data.dayThree}/>
-        </Masonry>
+          <Media queries={mediaQueries}>
+            { matches => 
+              matches.lg
+              ? (
+                <Masonry breakpointCols={breakpointColumns} columnClassName="schedule-masonry-column pl-12" className="schedule-masonry-grid flex flex-wrap flex-column overflow-hidden -ml-12">
+                  <ScheduleDay {...data.dayOne}/>
+                  <ScheduleDay className="pt-1.5" {...data.dayThree}/>
+                  <ScheduleDay className="pt-1.5" {...data.dayTwo}/>
+                </Masonry>
+              ) : (
+                <React.Fragment>
+                  <ScheduleDay {...data.dayOne}/>
+                  <ScheduleDay className="pt-1.5" {...data.dayTwo}/>
+                  <ScheduleDay className="pt-1.5" {...data.dayThree}/>
+                </React.Fragment>
+              )
+            }  
+            
+          </Media>
       </ContentWrapper>
     </React.Fragment>
   )
