@@ -22,7 +22,7 @@ const sponsorUrl = "https://astr.sk/earthxhack-sponsor"
 
 const ExhLogo: React.FC = () => {
   return (
-    <img src="http://cdn.weareasterisk.com/event-assets/earthxhack/logos/exh_logo.svg" alt="EarthxHack Logo"></img>
+    <img src="https://cdn.weareasterisk.com/event-assets/earthxhack/logos/exh_logo.svg" alt="EarthxHack Logo"></img>
   )
 }
 
@@ -180,7 +180,7 @@ const Landing: React.FC = () => {
               )
           }
         </Media>
-        <LazyImage className="w-full" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}/>
+        <LazyImage className="w-full lg:max-h-1/2-screen max-h-1/2-screen object-cover object-top" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}/>
       </div>
     </React.Fragment>
   )

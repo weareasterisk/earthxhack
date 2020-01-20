@@ -31,7 +31,7 @@ const eventData = {
   eventLocation,
   "image": [
     "https://cdn.weareasterisk.com/hackathon-assets/hackdfw/logos/png/hackdfw-1x1-color.png",
-    "http://cdn.weareasterisk.com/hackathon-assets/hackdfw/artwork/banner-hd-large.png"
+    "https://cdn.weareasterisk.com/hackathon-assets/hackdfw/artwork/banner-hd-large.png"
   ],
   "description": "EarthxHack is a hackathon designed to inspire you to use your creativity, technical thinking, and knowledge to solve real issues plaguing the world today. We want to provide a space to help inspire creative solutions, so you can create inspirational ideas that can be implemented on a global scale. We encourage you to come and join us in making new things and turning the world into a better place!",
 };
