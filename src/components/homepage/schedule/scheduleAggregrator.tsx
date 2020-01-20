@@ -31,7 +31,7 @@ const Schedule: React.FC<ISchedule> = ({data}) => {
   return (
     <React.Fragment>
       <ContentWrapper>
-        <SectionTitle name="Schedule" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower.png" />
+        <SectionTitle name="Schedule" image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/red-flower-ld.png" />
           <Media queries={mediaQueries}>
             { matches => 
               matches.lg
