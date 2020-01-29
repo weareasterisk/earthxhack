@@ -11,8 +11,12 @@ import Schedule from "../homepage/schedule/scheduleAggregrator"
 import ScheduleData from "../../config/schedule"
 import Contact from "../homepage/contact/contactAggregrator";
 import Footer from "../homepage/footer"
+import ReactPixel from "react-facebook-pixel"
 
 export default class HomePage extends Component {
+  componentDidMount() {
+    ReactPixel.pageView();
+  }
   render() {
     return (
       <React.Fragment>

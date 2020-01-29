@@ -1,5 +1,6 @@
 import React from "react";
 import Media from "react-media"
+import ReactPixel from "react-facebook-pixel"
 import ImageSpacer from "../common/imageSpacer"
 import LazyBackground from "../common/lazyBackground"
 import LazyImage from "../common/lazyImage";
@@ -67,7 +68,7 @@ const TagLine: React.FC = () => {
 const AttendButton: React.FC = () => {
   return (
     <div className="relative xl:w-11 lg:w-8 w-6 xl:ml-5 xl:-mt-2 mt-1 attend-baloon z-2">
-      <a href={registrationUrl}>
+      <a href={registrationUrl} id="attend-button">
         <LazyImage src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/attend.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/attend-ld.png"/>
         <div className="absolute xl:top-3 lg:top-2 text-center xl:left-2 lg:left-1.5 top-1.5 left-1">
           <p className="xl:text-base lg:text-sm text-xs">Apply to</p>
@@ -82,7 +83,7 @@ const VolunteerButton: React.FC = () => {
   return (
     <React.Fragment>
       <div className="relative xl:w-10 lg:w-8 w-5 xl:ml-16 lg:ml-10 ml-6 xl:-mt-2 -mt-4 volunteer-baloon z-2">
-        <a href={volunteerUrl}>
+        <a href={volunteerUrl} id="volunteer-button">
           <LazyImage src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/volunteer.png" placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/volunteer-ld.png"/>
           <div className="absolute xl:top-3 lg:top-2.5 text-center xl:left-1.25 lg:left-1.25 top-1.5 left-.5">
             <p className="xl:text-base lg:text-sm text-xxs">Apply to</p>
@@ -98,7 +99,7 @@ const SponsorButton: React.FC = () => {
   return (
     <React.Fragment>
         <div className="absolute xl:w-25 lg:w-18 w-12 xl:-top-2 -top-1 xl:-right-2 -right-4 z-1">
-          <a href={sponsorUrl}>
+          <a href={sponsorUrl} id="sponsor-button">
             <LazyImage className="w-full h-full sponsor-sun" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/sponsor.svg"/>
             <div className="absolute w-full h-auto xl:top-10 lg:top-7 top-4.5 flex justify-around text-center">
               <div>
@@ -136,54 +137,73 @@ const MobileButtons: React.FC = () => {
   )
 }
 
-const Landing: React.FC = () => {
-  return (
-    <React.Fragment>
-      <div className="min-h-screen bg-fadedblue relative z-10 overflow-x-hidden flex justify-between flex-col">
-        <Media queries={mediaQueries}>
-          { matches =>
-              matches.xl
-              ? ( 
-                <React.Fragment>
-                  {/* Desktop */}
-                  <div className="absolute w-full">
-                    <DesktopButtons/>
-                  </div>
-                  <ContentWrapper className="pt-8.5">
-                    <div className="w-40 float-left">
-                      <ExhLogo/>
-                      <div className="flex justify-between pt-3 text-2xl">
-                        <Location/>
-                        <TagLine/>
-                      </div>
-                    </div>
-                  </ContentWrapper>
-                </React.Fragment>
-              ) : (
-                <React.Fragment>
-                  {/* Mobile */}
-                  <div className="pt-3 px-2.5">
-                    <div className="flex justify-around">
-                      <div className="lg:text-2xl md:text-lg xs:text-base text-base">
-                        <ExhLogo/>
-                        <div className="pt-2 pl-1">
-                          <Location/>
-                        </div>
-                        <div className="relative pt-1">
-                          <MobileButtons/>
-                        </div>
-                        <TagLine/>
-                      </div>
-                    </div>
-                  </div>
-                </React.Fragment>
-              )
-          }
-        </Media>
-        <LazyImage className="w-full lg:max-h-1/2-screen max-h-1/2-screen object-cover object-top" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}/>
-      </div>
-    </React.Fragment>
-  )
-}
+export default class Landing extends React.Component {
+  componentDidMount() {
+    const attend = document.getElementById("attend-button")
+    const volunteer = document.getElementById("volunteer-button")
+    const sponsor = document.getElementById("sponsor-button")
+    this.setupPixelEvent(attend, "attend")
+    this.setupPixelEvent(volunteer, "volunteer")
+    this.setupPixelEvent(sponsor, "sponsor")
 
-export default Landing;
+  }
+
+  setupPixelEvent = (element: HTMLElement | null, name: string) => {
+    element?.addEventListener(
+      'click',
+      () => {
+        ReactPixel.trackCustom(name, {})
+      }
+    )
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="min-h-screen bg-fadedblue relative z-10 overflow-x-hidden flex justify-between flex-col">
+          <Media queries={mediaQueries}>
+            { matches =>
+                matches.xl
+                ? ( 
+                  <React.Fragment>
+                    {/* Desktop */}
+                    <div className="absolute w-full">
+                      <DesktopButtons/>
+                    </div>
+                    <ContentWrapper className="pt-8.5">
+                      <div className="w-40 float-left">
+                        <ExhLogo/>
+                        <div className="flex justify-between pt-3 text-2xl">
+                          <Location/>
+                          <TagLine/>
+                        </div>
+                      </div>
+                    </ContentWrapper>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    {/* Mobile */}
+                    <div className="pt-3 px-2.5">
+                      <div className="flex justify-around">
+                        <div className="lg:text-2xl md:text-lg xs:text-base text-base">
+                          <ExhLogo/>
+                          <div className="pt-2 pl-1">
+                            <Location/>
+                          </div>
+                          <div className="relative pt-1">
+                            <MobileButtons/>
+                          </div>
+                          <TagLine/>
+                        </div>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                )
+            }
+          </Media>
+          <LazyImage className="w-full lg:max-h-1/2-screen max-h-1/2-screen object-cover object-top" src={sunflowerFieldUrl} placeholder={sunflowerFieldPlaceholder}/>
+        </div>
+      </React.Fragment>
+    )
+  }
+}

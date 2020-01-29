@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import HomePage from "./components/pages/homepage" 
+import ReactPixel from "react-facebook-pixel"
 
 const eventLocation = {
   "location": {
@@ -36,23 +37,28 @@ const eventData = {
   "description": "EarthxHack is a hackathon designed to inspire you to use your creativity, technical thinking, and knowledge to solve real issues plaguing the world today. We want to provide a space to help inspire creative solutions, so you can create inspirational ideas that can be implemented on a global scale. We encourage you to come and join us in making new things and turning the world into a better place!",
 };
 
-const App: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8"/>
-        <title>EarthxHack | The Environmental Hackathon of Dallas</title>
-        <script className="structured-data-list" type="application/ld+json">
-          { JSON.stringify(eventData) }
-        </script>
-      </Helmet>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage}/>
-        </Switch>
-      </BrowserRouter>
-    </React.Fragment>
-  );
-}
+export default class App extends React.Component {
 
-export default App;
+  componentDidMount() {
+    ReactPixel.init('2979011885465884')
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Helmet>
+          <meta charSet="utf-8"/>
+          <title>EarthxHack | The Environmental Hackathon of Dallas</title>
+          <script className="structured-data-list" type="application/ld+json">
+            { JSON.stringify(eventData) }
+          </script>
+        </Helmet>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={HomePage}/>
+          </Switch>
+        </BrowserRouter>
+      </React.Fragment>
+    )
+  }
+}
