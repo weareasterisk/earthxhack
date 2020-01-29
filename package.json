@@ -28,7 +28,6 @@
     "react-media": "^1.10.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "react-snap": "^1.23.0",
     "typescript": "~3.7.4"
   },
   "scripts": {
@@ -40,8 +39,7 @@
     "build:css:watch": "postcss src/tailwind.scss -o src/generated.scss -w",
     "clean": "rimraf build node_modules",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap --no-sandbox"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,12 +54,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
     ]
   },
   "devDependencies": {
