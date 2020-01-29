@@ -39,7 +39,7 @@ const eventData = {
 
 export default class App extends React.Component {
 
-  componentDidMount() {
+  componentWillMount() {
     ReactPixel.init('2979011885465884')
   }
 
