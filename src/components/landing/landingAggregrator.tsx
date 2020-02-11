@@ -19,7 +19,8 @@ const sunflowerFieldPlaceholder = "https://cdn.weareasterisk.com/event-assets/ea
 
 const registrationUrl = "https://astr.sk/earthxhack-register"
 const volunteerUrl = "https://astr.sk/earthxhack-volunteer"
-const sponsorUrl = "https://astr.sk/earthxhack-sponsor"
+// const sponsorUrl = "https://astr.sk/earthxhack-sponsor"
+const sponsorUrl = "mailto:kila@weareasterisk.com"
 
 const ExhLogo: React.FC = () => {
   return (
