@@ -34,7 +34,7 @@
     "start": "cross-env NODE_ENV=development run-p build:css:watch start:code",
     "build": "cross-env NODE_ENV=production run-s build:css build:code",
     "start:code": "react-scripts start",
-    "build:code": "react-scripts build",
+    "build:code": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "build:css": "postcss src/tailwind.scss -o src/generated.scss",
     "build:css:watch": "postcss src/tailwind.scss -o src/generated.scss -w",
     "clean": "rimraf build node_modules",
