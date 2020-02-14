@@ -17,10 +17,11 @@ const mediaQueries = {
 const sunflowerFieldUrl = "https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/sunflower-field.png"
 const sunflowerFieldPlaceholder = "https://cdn.weareasterisk.com/event-assets/earthxhack/backgrounds/sunflower-field-ld.png"
 
-const registrationUrl = "https://astr.sk/earthxhack-register"
-const volunteerUrl = "https://astr.sk/earthxhack-volunteer"
+export const registrationUrl = "https://astr.sk/earthxhack-register"
+export const volunteerUrl = "https://astr.sk/earthxhack-volunteer"
 // const sponsorUrl = "https://astr.sk/earthxhack-sponsor"
-const sponsorUrl = "mailto:kila@weareasterisk.com"
+export const sponsorUrl = "mailto:kila@weareasterisk.com"
+export const mentorUrl = "https://astr.sk/earthxhack-mentor"
 
 const ExhLogo: React.FC = () => {
   return (
@@ -114,12 +115,29 @@ const SponsorButton: React.FC = () => {
   )
 }
 
+const MentorButton: React.FC = () => {
+  return (
+    <React.Fragment>
+      <div className="relative xl:w-14 lg:w-10 w-8 xl:-mt-30 xl:ml-16 lg:ml-12 ml-9 lg:-mt-20 xs:-pt-4 xs:mb-0 -pt-2 -mb-8 z-2 mentor-cloud">
+        <a href={mentorUrl} id="mentor-button">
+          <LazyImage className="w-full h-full" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/cloud.svg"/>
+          <div className="absolute w-full h-auto xl:top-4 top-2 text-center">
+            <p className="xl:text-lg lg:text-base text-xs">Apply to</p>
+            <p className="font-bold xl:text-3xl lg:text-lg text-sm">Mentor</p>
+          </div>
+        </a>
+      </div>
+    </React.Fragment>
+  )
+}
+
 const DesktopButtons: React.FC = () => {
   return (
     <React.Fragment>
       <div className="xl:push-1/2 xl:w-1/2 xl:mt-5 w-full z-5">
         <AttendButton/>
         <VolunteerButton/>
+        <MentorButton/>
         <SponsorButton/>
       </div>
     </React.Fragment>
@@ -132,6 +150,7 @@ const MobileButtons: React.FC = () => {
       <div className="xl:push-1/2 xl:w-1/2 xl:mt-5 w-full z-5">
         <AttendButton/>
         <VolunteerButton/>
+        <MentorButton/>
         <SponsorButton/>
       </div>
     </React.Fragment>
@@ -143,9 +162,11 @@ export default class Landing extends React.Component {
     const attend = document.getElementById("attend-button")
     const volunteer = document.getElementById("volunteer-button")
     const sponsor = document.getElementById("sponsor-button")
+    const mentor = document.getElementById("mentor-button")
     this.setupPixelEvent(attend, "attend")
     this.setupPixelEvent(volunteer, "volunteer")
     this.setupPixelEvent(sponsor, "sponsor")
+    this.setupPixelEvent(mentor, "mentor")
 
   }
 
@@ -161,7 +182,7 @@ export default class Landing extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="min-h-screen bg-fadedblue relative z-10 overflow-x-hidden flex justify-between flex-col">
+        <div className="min-h-screen bg-fadedblue relative z-10 md:pt-4 pt-2 overflow-x-hidden flex justify-between flex-col">
           <Media queries={mediaQueries}>
             { matches =>
                 matches.xl
@@ -191,7 +212,7 @@ export default class Landing extends React.Component {
                           <div className="pt-2 pl-1">
                             <Location/>
                           </div>
-                          <div className="relative pt-1">
+                          <div className="relative pt-1 md:pb-8 pb-4">
                             <MobileButtons/>
                           </div>
                           <TagLine/>

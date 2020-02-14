@@ -44,6 +44,11 @@ html {
   display: flex;
 	width: auto;
 }
+
+.mentor-cloud {
+	animation: float 12s ease-in-out infinite;
+}
+
 @media (min-width: 1024px){
 	.remove-margin:first-child {
 		margin-top: -4rem;
@@ -53,7 +58,7 @@ html {
 	padding-left: 12rem;
   background-clip: padding-box;
 }
- 
+
 /* Style your items */
 .faq-masonry-column > div {
 }
@@ -73,4 +78,27 @@ a {
 		text-decoration: underline;
 		color: #555
 	}
+}
+
+.navitem {
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		content: '';
+    bottom: 2px;
+
+    border-width: 0 0 2px;
+    border-style: solid;
+	}
+}
+
+#navToggler .patty {
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+}
+
+#navToggler #navCheckbox:checked ~ .patty
+{
+	transform: rotate(135deg);
 }

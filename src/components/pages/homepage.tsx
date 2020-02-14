@@ -11,6 +11,7 @@ import Schedule from "../homepage/schedule/scheduleAggregrator"
 import ScheduleData from "../../config/schedule"
 import Contact from "../homepage/contact/contactAggregrator";
 import Footer from "../homepage/footer"
+import Navigation from "../homepage/navigation/navigationAggregrator"
 import ReactPixel from "react-facebook-pixel"
 
 export default class HomePage extends Component {
@@ -20,6 +21,9 @@ export default class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
+        <header>
+          <Navigation/>
+        </header>
         <Landing/>
 
         <section id="about">
@@ -56,7 +60,9 @@ export default class HomePage extends Component {
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass.png"
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/compass-ld.png"
         />
-        <Contact/>
+        <section id="contact">
+          <Contact/>
+        </section>
         <Footer/>
       </React.Fragment>
 
