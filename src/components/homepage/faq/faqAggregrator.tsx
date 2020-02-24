@@ -23,6 +23,7 @@ const FAQs: React.FC<IFAQs> = ({data}) => {
           {data.map((content: IFAQ, key) => {
             return <FAQ
               faq={content}
+              key={key}
             />
           })}
         </Masonry>

@@ -13,7 +13,7 @@ const ScheduleDay: React.FC<IScheduleDay & IScheduleDayProps> = (data) => {
         {
           data.items.map((item, key) => {
             return (
-              <div className={`${(key % 2 === 1) ? "bg-fadedgreen" : ""} ${(item.phase ? "font-semibold" : "")} flex px-.5 -mx-.5 xl:text-lg lg:text-base lg:mb-1.5 text-xs mb-.5`}>
+              <div key={key} className={`${(key % 2 === 1) ? "bg-fadedgreen" : ""} ${(item.phase ? "font-semibold" : "")} flex px-.5 -mx-.5 xl:text-lg lg:text-base lg:mb-1.5 text-xs mb-.5`}>
                 <div className="float-left w-5/12">
                   <span>{item.period}</span>
                 </div>

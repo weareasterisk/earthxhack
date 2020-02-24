@@ -38,8 +38,8 @@ export interface NavigationProps {
 }
 
 export default class Navigation extends Component<NavigationProps, NavigationState> {
-  constructor() {
-    super({})
+  constructor(props: NavigationProps) {
+    super(props)
     this.state = {
       open: false,
     }
