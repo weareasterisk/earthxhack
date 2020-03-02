@@ -40,11 +40,12 @@ export default class HomePage extends Component {
           className="pt-4 lg:pt-14"
           background={"linear-gradient(180deg, #FFFFFF 0%, #E9F0F8 65.62%, #F9F3E9 77.08%, #F7EAAA 83.85%, #F2D312 93.23%)"}
         />
-        {/* <Sponsors data="asd"/>
+        
+        <Sponsors data="asd"/>
         <ImageSpacer 
           image="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood.png" 
           placeholder="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/wood-ld.png"
-        /> */}
+        />
 
         <section id="faq">
           <FAQs
