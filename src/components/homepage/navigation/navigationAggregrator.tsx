@@ -10,7 +10,7 @@ const PageNavigation: React.FC = () => {
     <React.Fragment>
       <NavigationItem link="#about">about</NavigationItem>
       <NavigationItem link="#phases">phases</NavigationItem>
-      <NavigationItem link="#faq">faq</NavigationItem>
+      <NavigationItem link="#faq">FAQ</NavigationItem>
       <NavigationItem link="#schedule">schedule</NavigationItem>
       <NavigationItem link="#contact">contact</NavigationItem>
     </React.Fragment>
@@ -38,8 +38,8 @@ export interface NavigationProps {
 }
 
 export default class Navigation extends Component<NavigationProps, NavigationState> {
-  constructor() {
-    super({})
+  constructor(props: NavigationProps) {
+    super(props)
     this.state = {
       open: false,
     }
