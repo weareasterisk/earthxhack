@@ -12,7 +12,7 @@ interface IPhase {
 }
 
 const Phase: React.FC<IPhase> = ({phase}) => {
-  const { startTime, endTime } = phase;
+  const { startTime, endTime, time } = phase;
   const start = moment(startTime)
   const end = moment(endTime)
 
@@ -22,7 +22,7 @@ const Phase: React.FC<IPhase> = ({phase}) => {
         <div className="flex w-full flex-wrap-reverse md:flex-no-wrap">
           <div className="max-w-lg w-full lg:pb-0 pb-4">
             <UnderlinedTitle className="font-thin lg:text-6xl text-3xl pb-1" lineClasses="h-1 lg:h-2" grow="left" color={COLORS.fadedblue} width="8rem">{phase.title}</UnderlinedTitle>
-            <PhasePeriod startTime={start} endTime={end}/>
+            <PhasePeriod startTime={start} endTime={end} time={time}/>
             <p className="font-normal lg:text-base text-sm">{phase.tagline}</p>
             <div className="lg:h-4 h-2.5"/>
             {phase.content && phase.content.map((item, key) => {

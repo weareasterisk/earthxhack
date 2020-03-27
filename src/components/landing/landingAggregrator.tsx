@@ -39,8 +39,8 @@ const Location: React.FC = () => {
           }}
           >
             <p>April 24-26, 2020</p>
-            <p>The Embarcadero Building</p>
-            <p>Fair Park, Dallas</p>
+            <p>The Internet</p>
+            {/* <p>Fair Park, Dallas</p> */}
           </div>
           <div className="absolute" style={{
             top: 0,
@@ -100,13 +100,13 @@ const VolunteerButton: React.FC = () => {
 const SponsorButton: React.FC = () => {
   return (
     <React.Fragment>
-        <div className="absolute xl:w-25 lg:w-18 w-12 xl:-top-2 -top-1 xl:-right-2 -right-4 z-1">
+        <div className="absolute xl:w-20 lg:w-18 w-12 xl:-top-2 -top-1 xl:-right-2 -right-4 z-1">
           <a href={sponsorUrl} id="sponsor-button">
             <LazyImage className="w-full h-full sponsor-sun" src="https://cdn.weareasterisk.com/event-assets/earthxhack/artwork/buttons/sponsor.svg"/>
-            <div className="absolute w-full h-auto xl:top-10 lg:top-7 top-4.5 flex justify-around text-center">
+            <div className="absolute w-full h-auto xl:top-8 lg:top-7 top-4.5 flex justify-around text-center">
               <div>
-                <p className="font-bold xl:text-2xl lg:text-base text-xs">Interested in <br/> Sponsoring?</p>
-                <p className="pt-.25 xl:text-base lg:text-xs text-xxs">Find out more</p>
+                <p className="font-bold xl:text-xl lg:text-base text-xs">Interested in <br/> Sponsoring?</p>
+                <p className="pt-.25 xl:text-sm lg:text-xs text-xxs">Find out more</p>
               </div>
             </div>
           </a>

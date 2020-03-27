@@ -12,7 +12,8 @@ const mediaQueries = {
 
 interface IPhasePeriod {
   startTime: Moment,
-  endTime?: Moment
+  endTime?: Moment,
+  time?: string
 }
 
 interface IPeriodDate {
@@ -21,7 +22,7 @@ interface IPeriodDate {
   time?: string
 }
 
-const PhasePeriod: React.FC<IPhasePeriod> = ({ startTime, endTime }) => {
+const PhasePeriod: React.FC<IPhasePeriod> = ({ startTime, endTime, time }) => {
   const mobileComponent = startTime.isSame(endTime, 'day')
     ? <React.Fragment>
       {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("h:mma") : ""}`}
@@ -44,13 +45,16 @@ const PhasePeriod: React.FC<IPhasePeriod> = ({ startTime, endTime }) => {
 
   return (
     <React.Fragment>
-      <Media queries={mediaQueries}>
+      { (time)
+        ? <p className="font-semibold lg:text-2xl text-base pb-1"> {time}</p>
+        : <Media queries={mediaQueries}>
         { matches =>
             matches.lg
             ? ( <p className="font-semibold text-2xl pb-1">{desktopComponent}</p> )
             : ( <p className="font-semibold text-base pb-1">{mobileComponent}</p> )
         }
       </Media>
+      }
     </React.Fragment>
   )
 }
