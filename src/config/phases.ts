@@ -31,8 +31,8 @@ const data: Array<IPhase> = [
   // },
   {
     title: "Part 1: Build",
-    startTime: "2020-04-25T09:00:00",
-    endTime: "2020-04-26T16:00:00",
+    startTime: "2020-04-24T09:00:00",
+    endTime: "2020-04-26T19:00:00",
     tagline: "A traditional hackathon, with a twist.",
     content: [
       "Build is the traditional EarthxHack experience that you’ve come to know and love, except this time, it’s all in 1s and 0s. We’ve designed a comprehensive virtual hackathon for you to collaborate and innovate with environmental partners, as well as your peers and new friends. Come up with interesting technical ideas and implement them to be eligible for prizes.",

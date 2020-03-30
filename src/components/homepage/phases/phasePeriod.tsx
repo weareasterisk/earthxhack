@@ -29,17 +29,17 @@ const PhasePeriod: React.FC<IPhasePeriod> = ({ startTime, endTime, time }) => {
     </React.Fragment>
 
     : <React.Fragment>
-      {`Starts: ${startTime.format("MMMM Do, h:mma")}`}
+      {`Starts: ${startTime.format("MMMM Do, h:mma")} CT`}
       <br/>
-      {`Ends: ${endTime ? endTime.format("MMMM Do, h:mma") : ""}`}
+      {`Ends: ${endTime ? endTime.format("MMMM Do, h:mma") : ""} CT`}
     </React.Fragment>
 
   const desktopComponent = startTime.isSame(endTime, 'day')
     ? <React.Fragment>
-      {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("h:mma") : ""}`}
+      {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("h:mma") : ""} CT`}
     </React.Fragment>
     : <React.Fragment>
-      {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("MMMM Do, h:mma") : ""}`}
+      {`${startTime.format("MMMM Do, h:mma")} - ${endTime ? endTime.format("MMMM Do, h:mma") : ""} CT`}
     </React.Fragment>
 
 

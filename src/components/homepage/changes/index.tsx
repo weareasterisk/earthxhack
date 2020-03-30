@@ -27,7 +27,7 @@ const Changes: React.FC = () => {
           <ListItem>
             <b>Prizes: </b>we’ll be offering an expanded prize pool since we don’t have to buy you all food.
             <List>
-              {/* <ListItem>Total prize pool will be <b>>$30,000 USD!</b></ListItem> */}
+              <ListItem>Total prize pool of <b>>$30,000 USD!</b></ListItem>
               <ListItem>First place will receive up to <b>$8,000.</b></ListItem>
               <ListItem>Second place will receive up to <b>$6,000</b></ListItem>
               <ListItem>Third place will receive up to <b>$4,000</b></ListItem>
