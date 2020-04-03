@@ -2,7 +2,7 @@ import IPhase from "../types/phase";
 
 const data: Array<IPhase> = [
   {
-    title: "Part 0: Learn",
+    title: "Part 1: Learn",
     startTime: "2020-04-24T12:00:00",
     endTime: "2020-04-24T18:00:00",
     time: "April 20th - 24th (Schedule TBA)",
@@ -30,7 +30,7 @@ const data: Array<IPhase> = [
   //   alt: "Grow"
   // },
   {
-    title: "Part 1: Build",
+    title: "Part 2: Build",
     startTime: "2020-04-24T09:00:00",
     endTime: "2020-04-26T19:00:00",
     tagline: "A traditional hackathon, with a twist.",
@@ -44,7 +44,7 @@ const data: Array<IPhase> = [
     alt: "Build"
   },
   {
-    title: "Part 2: Celebrate",
+    title: "Part 3: Celebrate",
     startTime: "2020-05-01T13:00:00",
     endTime: "2020-05-01T16:00:00",
     time: "Live at 1pm CT Saturday, May 2nd",
