@@ -34,7 +34,7 @@ jobs:
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v1
       with:
-        name: buildArtifacts
+        name: build
         path: build/
 
   deploy:
@@ -44,7 +44,7 @@ jobs:
     - name: Download Build Artifacts
       uses: actions/download-artifact@v1
       with:
-        name: buildArtifacts
+        name: build
 
     - uses: jakejarvis/s3-sync-action@master
       with:
