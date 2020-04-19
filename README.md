@@ -1,4 +1,4 @@
-[![pipeline status](https://gitlab.com/weareasterisk/external-ci-cd/earthxhack/badges/master/pipeline.svg)](https://gitlab.com/weareasterisk/external-ci-cd/earthxhack/commits/master)
+[![Pipeline Status](https://github.com/weareasterisk/earthxhack/workflows/production-deployment/badge.svg)](https://github.com/weareasterisk/earthxhack/actions)
 
 ***
 # Website for EarthxHack
