@@ -8,13 +8,10 @@ module.exports = {
   plugins: [
     require('postcss-import'),
     require('tailwindcss'),
-    require('autoprefixer')({
-      "grid": true
-    }),
+    require('autoprefixer')(),
     require('postcss-url'),
     require('postcss-nested'),
     require('postcss-preset-env')({
-      autoprefixer: { grid: true },
       features: {
           'nesting-rules': true
       },
