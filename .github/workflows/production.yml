@@ -28,6 +28,8 @@ jobs:
       run: yarn install --frozen-lockfile
     - name: Build Project
       run: yarn build
+      env:
+        CI: false
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v1
