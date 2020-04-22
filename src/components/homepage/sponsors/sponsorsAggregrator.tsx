@@ -16,6 +16,7 @@ const Sponsors: React.FC<ISponsorsAggregrator> = ({data}) => {
         <img className="max-w-3xl w-full h-auto m-auto" src="https://cdn.weareasterisk.com/event-assets/earthxhack/sponsors/Smurfit20Kappa20Group20Logo.jpg" alt="Smurfit Kappa Group"/>
         <img className="max-w-lg w-full h-auto m-auto" src="https://cdn.weareasterisk.com/sponsor-assets/statefarm/horizontal-red.png" alt="State Farm Insurance"/>
         <img className="max-w-md pt-4 w-full h-auto m-auto" src="https://cdn.weareasterisk.com/sponsor-assets/icreate/iCreate_EPS_Logo.png" alt="iCreate"/>
+        <img className="max-w-sm pt-4 w-full h-auto m-auto" src="https://cdn.weareasterisk.com/sponsor-assets/utd/UTD_50years_orange.png" alt="UTDallas"/>
 
         <div className="md:h-4 h-1"></div>
       </ContentWrapper>
